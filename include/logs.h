@@ -15,7 +15,7 @@ fields:
     
 */
 
-typedef struct DailyLog
+typedef struct 
 {
     int day;
     int month;
@@ -24,7 +24,7 @@ typedef struct DailyLog
     float sleepHrs;
     int waterGlasses;
 
-} ;
+} DailyLog;
 
 /* 
 
