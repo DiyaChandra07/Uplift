@@ -22,7 +22,7 @@ typedef struct
     int year;
     int mood;
     float sleepHrs;
-    int waterGlasses;
+    int waterGlasses; 
 
 } DailyLog;
 
