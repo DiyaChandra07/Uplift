@@ -57,3 +57,55 @@ DailyLog *read_all_logs(const char *filename, size_t *total_logs)
 
 
 }
+
+DailyLog *find_logs_by_date (const char *filename, int d, int m, int y, size_t *total_logs)
+{
+    *total_logs = 0;
+    size_t total = 0;
+
+    DailyLog *all = read_all_logs(filename, &total);
+    if (all == 0)
+    {
+        return NULL;
+    }
+
+    DailyLog *result = NULL;
+
+    for (size_t i = 0; i<total; i++)
+    {
+        if (date_equal(&all[i], d,m,y))
+        {
+            result = realloc(result, (*total_logs + 1)* sizeof(DailyLog));
+            result[*total_logs] = all[i];
+            (*total_logs)++ ;
+        }
+    }
+
+    free (all);
+    return result;
+
+
+}
+
+
+int date_equal(const DailyLog *a, int d, int m, int y) 
+{
+    DailyLog date = *a;
+    return (date.day == d && date.month == m && date.year == y);
+}
+
+
+int split_date(const char *s, int *d, int *m, int *y) 
+{
+    return sscanf(s, "%d/%d/%d", d, m, y) == 3;
+}
+
+
+void print_log(const DailyLog *log) 
+{
+    DailyLog entry = *log;
+    printf("Date       : %02d/%02d/%04d \n", entry.day, entry.month, log->year);
+    printf("Mood (1-5) : %d\n", entry.mood);
+    printf("Sleep hrs  : %.2f\n", entry.sleepHrs);
+    printf("Water (ml) : %d\n", entry.waterGlasses);
+}
