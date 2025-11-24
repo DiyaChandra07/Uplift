@@ -65,7 +65,7 @@ int view_journal_by_date(const char *filename, int d, int m, int y)
     //using read_line function to read line by line
     while ((line = read_line(f)) !=NULL)
     {
-        if (strcmp(header, strlen(header))==0)
+        if (strcmp(line, header) ==0)
         {
             printf("\nJournal entry written on %02d/%02d/%04d:\n", d,m,y);
             flag= 1;
