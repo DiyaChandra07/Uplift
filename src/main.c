@@ -34,16 +34,16 @@ void prompt_date(int *d, int *m,int *y) {
 
 //adding a doily log
 
-void add_daily_log()
+void daily_log()
 {
     DailyLog log;
 
     prompt_date(&log.day, &log.month, &log.year);
 
     printf("Mood (1-5): ");
-    scanf("%d", &log.sleepHrs);
+    scanf("%d", &log.mood);
     printf("Sleep Hours: ");
-    scanf("%d",&log.sleepHrs);
+    scanf("%f",&log.sleepHrs);
     printf("Water (glasses): ");
     scanf("%d",&log.waterGlasses);
 
@@ -157,7 +157,7 @@ int main()
 
         switch (choice) 
         {
-            case 1: add_daily_log(); break;
+            case 1: daily_log(); break;
             case 2: add_journal(); break;
             case 3: print_logs(); break;
             case 4: view_journal(); break;
