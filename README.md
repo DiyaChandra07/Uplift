@@ -54,11 +54,8 @@ It allows users to:
     Stores date-wise entries containing:
 
     Mood rating
-
     Sleep duration
-
     Water consumption
-
     Saved in logs.txt.
 
 ### Journal Module
@@ -87,11 +84,9 @@ It allows users to:
 ## Compilation Instructions
 
     From the project root directory, run:
-
     **gcc src/*.c -Iinclude -o uplift**
 
     To execute:
-
     **./uplift**
 
 ## How It Works
