@@ -99,6 +99,7 @@ void print_logs()
     if (result==0 || count==0)
     {
         printf("Sorry no logs found..\n"); 
+        return;
     }
 
     printf("\nLogs for %02d/%02d/%04d: \n",d,m,y);
@@ -141,8 +142,8 @@ int main()
 {
     while (1)
     {
-        printf("\n\n----- UpLift: Daily Wellness Tracker -----\n\n");
-        printf("\tWelcome to Uplift!\n\tYour space to reflect, track, and grow.\n");
+        printf("\n\n------- UpLift: Daily Wellness Tracker -------\n\n");
+        printf("\tWelcome to Uplift!\nYour space to reflect, track, and grow.\n\n");
         printf("1. Add Daily Log\n");
         printf("2. Add Journal Entry\n");
         printf("3. View Logs by Date\n");

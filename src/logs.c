@@ -28,7 +28,7 @@ int add_daily_log(const char *filename, DailyLog *entry)
 //Reading logs line by line
 DailyLog *read_all_logs(const char *filename, size_t *total_logs)
 {
-        total_logs = 0;
+        *total_logs = 0;
 
         FILE *f = fopen(filename, "r");
         if (f == NULL)
@@ -104,8 +104,8 @@ int split_date(const char *s, int *d, int *m, int *y)
 void print_log(const DailyLog *log) 
 {
     DailyLog entry = *log;
-    printf("Date       : %02d/%02d/%04d \n", entry.day, entry.month, log->year);
+    printf("Date       : %02d/%02d/%04d \n", entry.day, entry.month, entry.year);
     printf("Mood (1-5) : %d\n", entry.mood);
     printf("Sleep hrs  : %.2f\n", entry.sleepHrs);
-    printf("Water (ml) : %d\n", entry.waterGlasses);
+    printf("Water (glasses) : %d\n", entry.waterGlasses);
 }
