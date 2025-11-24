@@ -41,7 +41,7 @@ It allows users to:
     /
     │-- src/          (All .c files)
     │-- include/      (All .h files)
-    │-- docs/         (Project report, flowcharts, diagrams)
+    │-- docs/         (Project report)
     │-- assets/       (Screenshots)
     │-- README.md     (Project overview)
     │-- uplift        (sample input file)
