@@ -44,7 +44,7 @@ int weekly_summary(const char *logs_filename, int d, int m, int y)
     for (int i = 0; i< 7; i++)
     {
         size_t flag = 0;
-        DailyLog *logs = find_logs_by_date(logs_filename, d,m,y, &found);
+        DailyLog *logs = find_logs_by_date(logs_filename, d,m,y, &flag);
 
         if (logs)
         {
