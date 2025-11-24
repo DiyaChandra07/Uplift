@@ -3,7 +3,7 @@
 #include <string.h>
 #include "../include/journal.h"
 
-
+//custom readline function to read the journal line by line
 char *read_line(FILE *f)
 {
     static char buffer[600];
