@@ -3,6 +3,28 @@
 #include <string.h>
 #include "../include/journal.h"
 
+
+char *read_line(FILE *f)
+{
+    static char buffer[600];
+
+    if (fgets(buffer, sizeof(buffer), f) == NULL)
+        return NULL;
+
+    /*
+    to remove newline. if \n is encountered it will 
+    replace with end of string marker
+    */
+    for (int i = 0; buffer[i] != '\0'; i++) {
+    if (buffer[i] == '\n') {
+        buffer[i] = '\0';
+        break;
+    }
+}
+
+    return buffer;   
+}
+
 //adding a new journal entry
 
 int add_journal_entry(const char *filename, int d, int y, int m, const char *text)
