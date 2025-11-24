@@ -1,10 +1,10 @@
 # Uplift – Daily Wellness Tracker
----
+
 A lightweight C program to track mood, sleep, water intake, and personal journals.
 
 
 ## Overview
----
+
 **Uplift is a simple, offline wellness-tracking system developed in C.**
 
 It allows users to:
@@ -37,7 +37,7 @@ It allows users to:
     
 
 ## Project Structure
----
+
 /
 │-- src/          (All .c files)
 │-- include/      (All .h files)
@@ -49,10 +49,9 @@ It allows users to:
 └── logs.txt      (sample input file)
 
 ## Features
----
+
 
 ### Daily Wellness Logging
----
 Stores date-wise entries containing:
 
 Mood rating
@@ -64,7 +63,7 @@ Water consumption
 Saved in logs.txt.
 
 ### Journal Module
----
+
 Add personal journal entries
 
 Entries saved in plain text in journal.txt
@@ -72,7 +71,7 @@ Entries saved in plain text in journal.txt
 Each entry stored with date header and separator
 
 ### Date-wise Retrieval
----
+
 Retrieve and print:
 
 Logs for a selected date
@@ -80,7 +79,7 @@ Logs for a selected date
 Journal entries for a selected date
 
 ### Weekly Summary
----
+
 Given a start date, the program calculates:
 
 Average mood
@@ -102,7 +101,7 @@ To execute:
 **./uplift**
 
 ## How It Works
----
+
 **Add Daily Log**
 
 Prompts user for:
@@ -130,7 +129,7 @@ Collects and averages mood and sleep
 Sums water consumption
 
 ## Sample Interaction
----
+
 
 ------- UpLift: Daily Wellness Tracker -------
 
@@ -152,13 +151,13 @@ Water (glasses): 6
 Daily log added successfully.
 
 ## Testing & Verification Summary
----
+
 
 All features were tested individually.
 Errors such as pointer mis-handling and incorrect parameter order were resolved.
 The program runs smoothly and produces correct outputs for all modules.
 
 ## License
----
+
 This project is developed as part of the UPES First-Year C Programming Course.
 You may use or modify it for learning purposes.
