@@ -39,7 +39,7 @@ int weekly_summary(const char *logs_filename, int d, int m, int y)
     int waterSum = 0;
     int count = 0;
     
-    printf("\n----- Weekly Summary -----n");
+    printf("\n----- Weekly Summary -----\n");
 
     for (int i = 0; i< 7; i++)
     {

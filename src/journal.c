@@ -27,7 +27,7 @@ char *read_line(FILE *f)
 
 //adding a new journal entry
 
-int add_journal_entry(const char *filename, int d, int y, int m, const char *text)
+int add_journal_entry(const char *filename, int d, int m, int y, const char *text)
 {
     FILE *f = fopen(filename, "a");
     if (f == 0)
