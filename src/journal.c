@@ -69,23 +69,20 @@ int view_journal_by_date(const char *filename, int d, int m, int y)
         {
             printf("\nJournal entry written on %02d/%02d/%04d:\n", d,m,y);
             flag= 1;
-            free(line);
 
             while ((line = read_line(f)) != NULL)
             {
                 if (strncmp(line, "----",4)== 0)
                 {
-                    free(line);
                     break;
                 }
                 printf("%s", line);
-                free(line);
+                
             }
             
             break;
         }
-        free(line);
-
+        
     }
     fclose(f);
 
