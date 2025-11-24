@@ -142,7 +142,7 @@ int main()
     while (1)
     {
         printf("\n\n----- UpLift: Daily Wellness Tracker -----\n\n");
-        printf("\tWelcome to Uplift!\n\tYour space to reflect, track, and grow.\n")
+        printf("\tWelcome to Uplift!\n\tYour space to reflect, track, and grow.\n");
         printf("1. Add Daily Log\n");
         printf("2. Add Journal Entry\n");
         printf("3. View Logs by Date\n");
