@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/summary.h"
+
 #include "../include/logs.h"
+#include "../include/summary.h"
 
 static int is_leap(int y)
 {
@@ -28,11 +29,11 @@ static void next_day (int *d, int *m, int *y)
 
         }
     }
-
 }
 
 //weekly summary
-int weekly_summary(const char *logs_filename, int d, int m, int y) {
+int weekly_summary(const char *logs_filename, int d, int m, int y) 
+{
     float moodSum = 0;
     float sleepSum = 0;
     int waterSum = 0;
@@ -40,4 +41,42 @@ int weekly_summary(const char *logs_filename, int d, int m, int y) {
     
     printf("\n----- Weekly Summary -----n");
 
-    for (int i = 0)
+    for (int i = 0; i< 7; i++)
+    {
+        size_t flag = 0;
+        DailyLog *logs = find_logs_by_date(logs_filename, d,m,y, &found);
+
+        if (logs)
+        {
+            for (size_t j =0; j < flag; j++ )
+            {
+                moodSum += logs[j].mood;
+                sleepSum += logs[j].sleepHrs;
+                waterSum += logs[j].waterGlasses;
+
+                count++;
+
+            }
+            free (logs);
+        }
+
+        next_day(&d,&m,&y);
+
+    }
+
+    if (count == 0)
+    {
+        printf("No data for this week. \n");
+        return 0;
+    }
+
+    printf("Average Mood  : %.2f\n", moodSum  / count);
+    printf("Average Sleep : %.2f\n", sleepSum / count);
+    printf("Water (Total) : %d glasses\n", waterSum);
+
+    return 1;
+
+}
+
+
+
