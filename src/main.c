@@ -81,7 +81,7 @@ void add_journal()
 
     add_journal_entry(JOURNAL_FILE, d,m, y, journal);
 
-    pritnf("Journal entry saved. Have a great day!");
+    printf("Journal entry saved. Have a great day!");
 }
 
 //printing logs of specific day entered by user
@@ -106,7 +106,7 @@ void print_logs()
     for (size_t i=0; i<count; i++)
     {
         print_log(&result[i]);
-        prtinf("-----------------------\n");
+        printf("-----------------------\n");
     }
     free (result);
 
