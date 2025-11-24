@@ -76,7 +76,7 @@ int view_journal_by_date(const char *filename, int d, int m, int y)
                 {
                     break;
                 }
-                printf("%s", line);
+                printf("%s\n", line);
                 
             }
             
